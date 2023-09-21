@@ -1,15 +1,12 @@
-package com.nisum.crud.service;
+package com.nisum.crud.validator;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.springframework.stereotype.Service;
-
 import com.nisum.crud.exception.MessageErrorException;
 import com.nisum.crud.model.User;
 
-@Service
-public class ValidatorService {
+public class Validator {
 	
 	private String EMAIL_REGEX = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$";
     private Pattern pattern = Pattern.compile(EMAIL_REGEX);

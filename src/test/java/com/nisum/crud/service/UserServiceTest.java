@@ -21,6 +21,7 @@ import com.nisum.crud.model.Phone;
 import com.nisum.crud.model.User;
 import com.nisum.crud.repository.PhoneRepository;
 import com.nisum.crud.repository.UserRepository;
+import com.nisum.crud.validator.Validator;
 
 @ExtendWith(SpringExtension.class)
 public class UserServiceTest {
@@ -35,7 +36,7 @@ public class UserServiceTest {
     private UserService userService;
     
     @InjectMocks
-    private ValidatorService validatorService;
+    private Validator validatorService;
 
     @BeforeEach
     public void setUp() {

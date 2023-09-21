@@ -11,6 +11,7 @@ import com.nisum.crud.model.Phone;
 import com.nisum.crud.model.User;
 import com.nisum.crud.repository.PhoneRepository;
 import com.nisum.crud.repository.UserRepository;
+import com.nisum.crud.validator.Validator;
 
 import jakarta.transaction.Transactional;
 
@@ -27,15 +28,7 @@ public class UserService {
 	@Autowired
     private PhoneRepository phoneRepository;
 	
-	@Autowired
-    private ValidatorService validatorService;
-	
-	/*private final ValidatorService validatorService;
-	
-	@Autowired
-    public UserService(ValidatorService validatorService) {
-        this.validatorService = validatorService;
-    }*/
+    private Validator validator = new Validator();
 
     public List<User> getAllUsers() {
         return userRepository.findAll();
@@ -47,8 +40,8 @@ public class UserService {
 
     public User createUser(User user) {
     	
-    	// Servicio implementado para validaciones
-    	//validatorService.validateUser(user);
+    	// Validaciones
+    	validator.validateUser(user);
     	
     	// Se lanza excepcion si se identifica que el correo ya existe en la base de datos
     	if (userRepository.findByEmail(user.getEmail()) != null) {
