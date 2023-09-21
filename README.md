@@ -23,7 +23,7 @@ En la respuesta se requiere una salida especifica en donde se logren apreciar al
 - modified
 - active
 
-En el repositorio encontraras una carpeta (docs) con los archivo de json correspondiente a Postman (Un cliente de consumo de Api)
+En el repositorio encontraras una carpeta (docs) con el archivo json ***nisum-crud-usuarios.postman_collection.json*** para importar en Postman (Un cliente de consumo de Api)
 
 ### Base de datos
 Esta es H2 es en memoria y para poder consultar se requiere:
