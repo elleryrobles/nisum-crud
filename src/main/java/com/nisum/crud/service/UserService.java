@@ -20,8 +20,6 @@ import jakarta.transaction.Transactional;
 public class UserService {
 	
 	
-	
-	
 	@Autowired
     private UserRepository userRepository;
 	
