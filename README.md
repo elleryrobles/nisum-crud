@@ -73,6 +73,7 @@ Un test donde se comprueba la creación de un usuario con el listado teléfonos.
 
   
 ### Estructura de archivos
+```
 src/
 |-- main/
 |   |-- java/
@@ -112,3 +113,4 @@ src/
 |   |                   |-- PhoneServiceTest.java
 |
 |-- pom.xml
+```
